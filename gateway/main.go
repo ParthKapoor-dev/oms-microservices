@@ -13,7 +13,7 @@ import (
 
 var (
 	httpAddr         = common.EnvString("HTTP_ADDR", ":8080")
-	OrderServiceAddr = "localhost:3000"
+	OrderServiceAddr = "localhost:2000"
 )
 
 func main() {
@@ -37,5 +37,4 @@ func main() {
 	if err := http.ListenAndServe(httpAddr, mux); err != nil {
 		log.Fatal("Failed to Start the server")
 	}
-
 }
