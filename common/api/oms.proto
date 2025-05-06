@@ -1,0 +1,9 @@
+syntax = "proto3"
+
+option go_package = "github.com/parthkapoor-dev/common/api";
+
+package api;
+
+service OrderService{
+    rpc CreateOrder() returns ()
+}
