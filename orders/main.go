@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"log"
 	"net"
 
@@ -25,9 +24,7 @@ func main() {
 
 	store := NewStore()
 	svc := NewService(store)
-	NewGrpcHandler(grpcServer)
-
-	svc.CreateOrder(context.Background())
+	NewGrpcHandler(grpcServer, svc)
 
 	log.Println("grpc server started at ", grpcAddr)
 
